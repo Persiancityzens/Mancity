@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>صفحه طرفداران منچسترسیتی</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazir&display=swap');
+
+    body {
+      font-family: 'Vazir', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      direction: rtl;
+      background-color: #f7f7f7; /* پس‌زمینه روشن */
+    }
+
+    /* هدر */
+    .header {
+      background-color: #1C2C5B; /* آبی تیره */
+      padding: 30px;
+      text-align: center;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 3rem;
+      font-weight: 700;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+
+    /* ناوبری */
+    .nav {
+      display: flex;
+      justify-content: center;
+      background-color: #003A72; /* آبی تیره‌تر */
+      padding: 10px 0;
+    }
+
+    .nav a {
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s, transform 0.3s;
+      cursor: pointer;
+    }
+
+    .nav a:hover {
+      background-color: #6CABDD;
+      transform: scale(1.1);
+    }
+
+    /* بنر */
+    .banner {
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url('https://www.reuters.com/resizer/v2/https://cloudfront-us-east-2.images.arcpublishing.com/reuters/DIT5EO2UFBKU3OEMLZECQEMJQY.jpg?auth=6496800b423e215e072d301b70d64000f2271e82f1ae3e294a23d855242f9a6c');
+      text-align: center;
+    }
+
+    .banner h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+      color: #fff;
+    }
+
+    /* محتوای اصلی */
+    .content {
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: right;
+      background-color: #fff;
+      border-radius: 8px;
+    }
+
+    .content h3 {
+      font-size: 2.5rem;
+      color: #004CFF;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .content p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    /* جدول لیگ برتر */
+    .premier-league-table {
+      margin-top: 40px;
+      border-radius: 8px;
+      background-color: #ffffff;
+    }
+
+    .premier-league-table table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 1.1rem;
+    }
+
+    .premier-league-table th, .premier-league-table td {
+      padding: 12px;
+      text-align: center;
+    }
+
+    .premier-league-table th {
+      background-color: #1C2C5B;
+      color: white;
+    }
+
+    .premier-league-table tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    .premier-league-table tr:hover {
+      background-color: #e0f7fa;
+    }
+
+    /* ترانه‌ها */
+    .chants {
+      margin-top: 40px;
+    }
+
+    .chants h3 {
+      font-size: 2.5rem;
+      color: #004CFF;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .chants ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .chants li {
+      background-color: #f0f0f0;
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      border-radius: 6px;
+    }
+
+    .footer {
+      background-color: #003A72;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 0.9rem;
+    }
+
+    .footer p {
+      margin: 0;
+    }
+
+    /* طراحی پاسخگو */
+    @media (max-width: 768px) {
+      .banner h2 {
+        font-size: 2rem;
+      }
+
+      .content {
+        padding: 20px;
+      }
+
+      table, th, td {
+        font-size: 0.9rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>صفحه طرفداران منچسترسیتی</h1>
+  </div>
+
+  <div class="nav">
+    <a href="#home">خانه</a>
+    <a href="video.html">ویدئو</a>
+    <a href="articles.html">اخبار</a>
+    <a href="matchday.html">روز مسابقه</a>
+    <a href="https://www.premierleague.com/tables?team=FIRST">جدول</a>
+  </div>
+
+  <div class="banner" id="banner">
+    <h2>این شهر ماست</h2>
+  </div>
+
+  <div class="content">
+    <h3>آخرین اخبار منچسترسیتی</h3>
+    <p>ناتان آکه اکنون مصدوم است.</p>
+
+    <div class="premier-league-table">
+      <h3>جدول لیگ برتر 10 تیم اول</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>رتبه</th>
+            <th>تیم</th>
+            <th>بازی</th>
+            <th>برد</th>
+            <th>مساوی</th>
+            <th>باخت</th>
+            <th>امتیاز</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>منچسترسیتی</td>
+            <td>14</td>
+            <td>12</td>
+            <td>2</td>
+            <td>0</td>
+            <td>38</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>آرسنال</td>
+            <td>14</td>
+            <td>11</td>
+            <td>1</td>
+            <td>2</td>
+            <td>34</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>لیورپول</td>
+            <td>14</td>
+            <td>10</td>
+            <td>3</td>
+            <td>1</td>
+            <td>33</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>تاتنهام</td>
+            <td>14</td>
+            <td>9</td>
+            <td>3</td>
+            <td>2</td>
+            <td>30</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>منچستریونایتد</td>
+            <td>14</td>
+            <td>8</td>
+            <td>4</td>
+            <td>2</td>
+            <td>28</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>نیوکاسل</td>
+            <td>14</td>
+            <td>7</td>
+            <td>3</td>
+            <td>4</td>
+            <td>24</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>استون ویلا</td>
+            <td>14</td>
+            <td>7</td>
+            <td>3</td>
+            <td>4</td>
+            <td>24</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>برنلی</td>
+            <td>14</td>
+            <td>6</td>
+            <td>3</td>
+            <td>5</td>
+            <td>21</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>بورنموث</td>
+            <td>14</td>
+            <td>5</td>
+            <td>4</td>
+            <td>5</td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>ولورهمپتون</td>
+            <td>14</td>
+            <td>4</td>
+            <td>5</td>
+            <td>5</td>
+            <td>17</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="chants" id="chants">
+      <h3>ترانه‌های محبوب منچسترسیتی</h3>
+      <ul>
+        <li><strong>Blue Moon</strong> - "Blue Moon, you saw me standing alone..."</li>
+        <li><strong>We Love You City</strong> - "We love you City, we do, oh City we love you!"</li>
+        <li><strong>Come On City</strong> - "Come on City, Come on City, we’ll never stop!"</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2024 صفحه طرفداران منچسترسیتی. تمامی حقوق محفوظ است.</p>
+  </div>
+
+  <script>
+    const images = [
+      'https://www.reuters.com/resizer/v2/https://cloudfront-us-east-2.images.arcpublishing.com/reuters/DIT5EO2UFBKU3OEMLZECQEMJQY.jpg?auth=6496800b423e215e072d301b70d64000f2271e82f1ae3e294a23d855242f9a6c',
+      // تصاویر دیگر را اضافه کنید
+    ];
+
+    let currentImageIndex = 0;
+
+    function changeBannerBackground() {
+      const banner = document.getElementById('banner');
+      banner.style.backgroundImage = `url(${images[currentImageIndex]})`;
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+    }
+
+    setInterval(changeBannerBackground, 5000);
+
+    changeBannerBackground();
+  </script>
+</body>
+</html>

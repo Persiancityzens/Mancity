@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manchester City Fan Page</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f7fc;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    /* هدر */
+    .header {
+      background-color: #004CFF;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #FFFFFF;
+      font-weight: 700;
+    }
+
+    /* نوار ناوبری */
+    .nav {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      padding: 12px 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .nav a:hover {
+      background-color: #6CABDD;
+      transform: translateY(-3px);
+    }
+
+    /* بنر */
+    .banner {
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+      box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .banner h2 {
+      font-size: 3rem;
+      font-weight: 600;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    /* محتوا */
+    .content {
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .content h3 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #1C2C5B;
+    }
+
+    .blog-posts-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .blog-post {
+      background-color: #FFFFFF;
+      width: calc(33.333% - 20px);
+      box-sizing: border-box;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .blog-post:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .blog-post img {
+      max-width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .blog-post h4 {
+      font-size: 1.6rem;
+      color: #1C2C5B;
+      padding: 15px;
+      margin: 0;
+      text-align: left;
+    }
+
+    .blog-post p {
+      font-size: 1.1rem;
+      padding: 0 15px;
+      color: #666;
+      margin: 10px 0;
+    }
+
+    .blog-post .read-more {
+      display: inline-block;
+      margin: 20px 15px 15px;
+      padding: 10px 20px;
+      background-color: #004CFF;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .blog-post .read-more:hover {
+      background-color: #6CABDD;
+    }
+
+    /* فوتر */
+    .footer {
+      background-color: #1C2C5B;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      font-size: 1rem;
+    }
+
+    .footer p {
+      margin: 0;
+    }
+
+    /* پاپ‌آپ */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .popup {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 15px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .popup h2 {
+      margin: 0 0 15px;
+      color: #004CFF;
+      font-size: 1.8rem;
+    }
+
+    .popup button {
+      background-color: #004CFF;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      margin: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .popup button:hover {
+      background-color: #6CABDD;
+    }
+
+    /* ریسپانسیو */
+    @media (max-width: 768px) {
+      .blog-post {
+        width: 100%;
+      }
+
+      .banner h2 {
+        font-size: 2.2rem;
+      }
+
+      .content {
+        padding: 20px;
+      }
+
+      .header h1 {
+        font-size: 2rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Manchester City Fan Page</h1>
+  </div>
+
+  <div class="nav">
+    <a href="#home">Home</a>
+    <a href="video.html">Video</a>
+    <a href="articles.html">News</a>
+    <a href="matchday.html">Matchday</a>
+    <a href="https://www.premierleague.com/tables?team=FIRST">Table</a>
+  </div>
+
+  <div class="banner" id="banner">
+    <h2>This is our city</h2>
+  </div>
+
+  <div class="content">
+    <h3>Latest Manchester City News</h3>
+    <p>Nathan Ake is now injured.</p>
+
+    <div class="blog-posts-container">
+      <div class="blog-post">
+        <img src="https://cf-images.eu-west-1.prod.boltdns.net/v1/static/10228001001/b60d1fd3-4cd4-4359-a046-cabd70ae0a57/b1bb6fed-4568-484d-bd9f-7a6b0b4e23cd/810x456/match/image.jpg" alt="Ikay Gundogan">
+        <h4>Latest Signing: Ikay Gundogan</h4>
+        <p>Manchester City has just signed Ikay from Barcelona.</p>
+        <a href="full-article.html" class="read-more">Read More</a>
+      </div>
+
+      <div class="blog-post">
+        <img src="https://assets.goal.com/v3/assets/blt735745d158a0b15e/bltbd82fc8b3f0cd10a/64561a8c62697c37f363ad0d5b/joao-cancelo.jpg" alt="Joao Cancelo">
+        <h4>Joao Cancelo's Road to Recovery</h4>
+        <p>Read about Joao Cancelo's injury comeback and rehab journey.</p>
+        <a href="full-article.html" class="read-more">Read More</a>
+      </div>
+
+      <div class="blog-post">
+        <img src="https://www.mcfcwatch.com/wp-content/uploads/2023/09/kevin-de-bruyne-manchester-city.jpg" alt="Kevin De Bruyne">
+        <h4>Kevin De Bruyne's Contract Extension</h4>
+        <p>De Bruyne signs a long-term contract with Manchester City.</p>
+        <a href="full-article.html" class="read-more">Read More</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2024 Manchester City Fan Page | All Rights Reserved</p>
+  </div>
+
+  <!-- پاپ‌آپ انتخاب زبان -->
+  <div class="popup-overlay" id="popup-overlay">
+    <div class="popup">
+      <h2>Choose Language / انتخاب زبان</h2>
+      <button id="popup-close">Close</button>
+      <button id="popup-en">English</button>
+      <button id="popup-fa">فارسی</button>
+    </div>
+  </div>
+
+  <script>
+    // تغییر تصویر پس‌زمینه بنر
+    const images = [
+      'https://www.reuters.com/resizer/v2/https://cloudfront-us-east-2.images.arcpublishing.com/reuters/DIT5EO2UFBKU3OEMLZECQEMJQY.jpg?auth=6496800b423e215e072d301b70d64000f2271e82f1ae3e294a23d855242f9a6c',
+      // Add more image URLs here
+    ];
+
+    let currentImageIndex = 0;
+
+    function changeBannerBackground() {
+      const banner = document.getElementById('banner');
+      banner.style.backgroundImage = `url(${images[currentImageIndex]})`;
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+    }
+
+    setInterval(changeBannerBackground, 5000);
+    changeBannerBackground();
+
+    // نمایش پاپ‌آپ
+    window.onload = function () {
+      setTimeout(function () {
+        document.getElementById('popup-overlay').style.display = 'flex';
+      }, 2000);
+    };
+
+    // بستن پاپ‌آپ
+    document.getElementById('popup-close').onclick = function () {
+      document.getElementById('popup-overlay').style.display = 'none';
+    };
+
+    // تغییر زبان
+    document.getElementById('popup-en').onclick = function () {
+      alert('You selected English');
+      document.getElementById('popup-overlay').style.display = 'none';
+    };
+
+    document.getElementById('popup-fa').onclick = function () {
+      alert('شما زبان فارسی را انتخاب کردید');
+      document.getElementById('popup-overlay').style.display = 'none';
+    };
+  </script>
+</body>
+</html>
